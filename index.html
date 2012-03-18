@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Countdown</title>
+        <style>
+            div#countdown { font-size: 75px; margin: 150px auto; width: 660px; }
+            div#countdown > div { float: left; margin: 10px; text-align: center; width: 200px; }
+            div#countdown > div > div,
+            div#countdown > div > span { float: left; }
+            span.dash_title { clear: both; display: block; }
+            .days_dash span.dash_title { margin-left: -38px; }
+            .hours_dash span.dash_title { margin-left: -48px; }
+            .minutes_dash span.dash_title { margin-left: -68px; }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.lwtCountdown-1.0.js" type="text/javascript"></script>
+        <script>
+            // Initiate Countdown
+            $(function() {
+                $('#countdown').countDown({
+                    targetDate : {
+                        'day' : 16,
+                        'month':6,
+                        'year':2012,
+                        'hour':6,
+                        'min':30,
+                        'sec':0
+                    },
+                    omitWeeks: true
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="countdown">
+            <div class="dash days_dash">
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+                <span class="dash_title">days</span>
+            </div>
+
+            <div class="dash hours_dash">
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+                <span class="dash_title">hours</span>
+            </div>
+
+            <div class="dash minutes_dash">
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+                <span class="dash_title">minutes</span>
+            </div>
+        </div>
+    </body>
+</html>
